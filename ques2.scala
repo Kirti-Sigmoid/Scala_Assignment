@@ -39,8 +39,8 @@ object ques2 extends App {
  }
   println(rows(i)(1)+" scored best highest score "+rows(i)(4))
 
-
-  var res = ListMap(score.toSeq.sortWith(_._2 > _._2):_*)
+// Top 5 players by run scored.
+  var res = ListMap(score.toSeq.sortWith(_._2 > _._2):_*)// sorting in decending order
 
   println("Top 5 players by run scored\n")
  res.take(5).foreach
@@ -50,12 +50,12 @@ object ques2 extends App {
 
 
   println("Top 5 players by wicket taken\n")
-  res=ListMap(wickets.toSeq.sortWith(_._2 > _._2):_*)
+  res=ListMap(wickets.toSeq.sortWith(_._2 > _._2):_*)// sorting in decending order
   res.take(5).foreach
   {
     case (key, value) => println (key + " take " + value+" wickets")
   }
-  res=ListMap(rank.toSeq.sortWith(_._2 > _._2):_*)
+  res=ListMap(rank.toSeq.sortWith(_._2 > _._2):_*)// sorting in decending order
 
   var c=1
   println("Ranking players with overall performance\n")
